@@ -75,17 +75,16 @@ type S struct {
 type S1 struct {
 	I []int
 }
+
 func main() {
-	s :=&S{}
-	 s.A =append(s.A, S1{I:[]int{5}})
+	s := &S{}
+	s.A = append(s.A, S1{I: []int{5}})
 
+	s.A[len(s.A)-1].I = append(s.A[len(s.A)-1].I, 6)
 
-	  ll :=&s.A[len(s.A)-1].I
-	s.A[len(s.A)-1].I = append( s.A[len(s.A)-1].I, 6)
-
-	 fmt.Println(s)
- var a []int
-a = append(a,4)
+	fmt.Println(s)
+	var a []int
+	a = append(a, 4)
 	// a := []int{0, 1, 2, 3, 4, 5, 6, 7}
 	// fmt.Println(len(a[3:5]))
 	// index := []int{3, 7 }
